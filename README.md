@@ -1,4 +1,32 @@
-# K-BrowseComp Search Evals
+# K-BrowseComp
+
+## Introduction
+K-BrowseComp is a Korean web-browsing agent benchmark inspired by
+[BrowseComp](https://arxiv.org/abs/2504.12516). 
+It evaluates whether agents can retrieve hard-to-find public information from Korean websites, keep track of multi-hop or parallel evidence, and return a single stable short answer grounded in Korean contexts.
+
+📄 Paper: (arXiv link coming soon)
+
+🤗 Dataset: [K-BrowseComp](https://huggingface.co/datasets/prometheus-eval/k-browsecomp)
+
+K-BrowseComp contains **400 problems**:
+
+- **K-BrowseComp-Verified**: 300 problems manually written and validated by native Korean speakers.
+- **K-BrowseComp-Synthetic**: 100 machine-generated diagnostic problems created with hard few-shot exemplars and failure-mode-targeted generation. This split is reported separately as a targeted stress test, not pooled with the verified score.
+
+Each verified item is designed to require either **multi-hop reasoning** or **parallel-branching** constraint satisfaction over public Korean web evidence. 
+The dataset release includes the *problem, gold answer, expected trajectory, source URLs, and checklist values for key intermediate evidence*, enabling trajectory diagnostics in addition to final-answer scoring.
+
+In our experiments, even the strongest evaluated model remains below 50% on K-BrowseComp-Verified and reaches only 26% on the Synthetic split.
+
+<p align="center">
+  <img src="misc/error_example.png" alt="Representative trajectory-level failures in K-BrowseComp" width="100%">
+</p>
+
+The benchmark therefore tests more than whether a model can search in Korean: it tests whether the model can preserve the exact evidence chain needed to answer Korean users' browsing questions reliably.
+
+
+## K-BrowseComp Search Evals
 
 Evaluation and automated problem-generation code for K-BrowseComp.
 
@@ -36,7 +64,7 @@ from the repository root.
 
 ## Colab Quickstart
 
-Run the Colab notebook to evaluate `gpt-5-nano` on a dry-run Ko-BrowseComp
+Run the Colab notebook to evaluate `gpt-5-nano` on a dry-run K-BrowseComp
 sample with only notebook cells. The notebook downloads the dataset from
 [prometheus-eval/k-browsecomp](https://huggingface.co/datasets/prometheus-eval/k-browsecomp):
 
