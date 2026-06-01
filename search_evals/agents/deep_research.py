@@ -1,3 +1,6 @@
+# Portions adapted from https://github.com/perplexityai/search_evals/blob/main/search_evals/agents/deep_research.py
+# Original license: MIT.
+
 from __future__ import annotations
 
 import logging

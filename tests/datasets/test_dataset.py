@@ -1,3 +1,6 @@
+# Portions adapted from https://github.com/perplexityai/search_evals/blob/main/tests/datasets/test_dataset.py
+# Original license: MIT.
+
 from pathlib import Path
 
 import pytest

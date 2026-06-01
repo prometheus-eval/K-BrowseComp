@@ -1,3 +1,6 @@
+# Portions adapted from https://github.com/perplexityai/search_evals/blob/main/tests/agents/test_single_step_search.py
+# Original license: MIT.
+
 from collections.abc import Generator
 from unittest.mock import AsyncMock, MagicMock, patch
 

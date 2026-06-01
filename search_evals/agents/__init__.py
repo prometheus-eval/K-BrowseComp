@@ -1,3 +1,6 @@
+# Portions adapted from https://github.com/perplexityai/search_evals/blob/main/search_evals/agents/__init__.py
+# Original license: MIT.
+
 from search_evals.agents.deep_research import DeepResearchAgent
 from search_evals.agents.llms import (
     AnthropicConversation,

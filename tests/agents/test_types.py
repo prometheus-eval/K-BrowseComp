@@ -1,3 +1,6 @@
+# Portions adapted from https://github.com/perplexityai/search_evals/blob/main/tests/agents/test_types.py
+# Original license: MIT.
+
 from search_evals.agents.llms import AnthropicConversation, OpenAIConversation
 from search_evals.agents.tools import OpenAIToolSchema
 from search_evals.agents.types import (

@@ -1,3 +1,6 @@
+<!-- Portions adapted from https://github.com/perplexityai/search_evals/blob/main/docs/DEVELOPMENT.md -->
+<!-- Original license: MIT. -->
+
 # Search evaluations: developer guidance
 
 ## Architecture

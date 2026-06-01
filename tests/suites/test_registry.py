@@ -1,3 +1,6 @@
+# Portions adapted from https://github.com/perplexityai/search_evals/blob/main/tests/suites/test_registry.py
+# Original license: MIT.
+
 from pathlib import Path
 
 import pytest

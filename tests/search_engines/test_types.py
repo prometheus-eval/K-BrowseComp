@@ -1,3 +1,6 @@
+# Portions adapted from https://github.com/perplexityai/search_evals/blob/main/tests/search_engines/test_types.py
+# Original license: MIT.
+
 import pytest
 
 from search_evals.search_engines import SearchResult

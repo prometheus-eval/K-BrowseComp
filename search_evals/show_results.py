@@ -1,3 +1,6 @@
+# Portions adapted from https://github.com/perplexityai/search_evals/blob/main/search_evals/show_results.py
+# Original license: MIT.
+
 from collections import defaultdict
 from pathlib import Path
 

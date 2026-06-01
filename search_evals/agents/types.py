@@ -1,3 +1,6 @@
+# Portions adapted from https://github.com/perplexityai/search_evals/blob/main/search_evals/agents/types.py
+# Original license: MIT.
+
 from abc import ABC, abstractmethod
 from enum import StrEnum
 from typing import TYPE_CHECKING, Any, Literal

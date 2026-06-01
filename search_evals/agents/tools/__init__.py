@@ -1,3 +1,6 @@
+# Portions adapted from https://github.com/perplexityai/search_evals/blob/main/search_evals/agents/tools/__init__.py
+# Original license: MIT.
+
 from search_evals.agents.tools.base import (
     AnthropicToolSchema,
     LLMProvider,
@@ -6,18 +9,18 @@ from search_evals.agents.tools.base import (
     ToolDef,
     ToolSchema,
 )
+from search_evals.agents.tools.open_url import (
+    OpenURLInput,
+    OpenURLOutput,
+    OpenURLTool,
+    OpenURLToolDef,
+)
 from search_evals.agents.tools.search_web import (
     SearchWebInput,
     SearchWebOutput,
     SearchWebResult,
     SearchWebTool,
     SearchWebToolDef,
-)
-from search_evals.agents.tools.open_url import (
-    OpenURLInput,
-    OpenURLOutput,
-    OpenURLTool,
-    OpenURLToolDef,
 )
 from search_evals.agents.tools.toolset import ToolSet
 

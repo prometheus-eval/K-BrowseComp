@@ -13,6 +13,16 @@ This public repo includes only the Ko-BrowseComp datasets:
 Generated run outputs, model trajectories, seed-bank artifacts, local API keys,
 virtual environments, and logs are ignored by git.
 
+## License and Attribution
+
+Unless otherwise noted, this repository is distributed under the MIT License;
+see [LICENSE](LICENSE).
+
+The evaluation framework is adapted from
+[perplexityai/search_evals](https://github.com/perplexityai/search_evals),
+which is also MIT-licensed. Files adapted from that repository include
+file-level source comments at the top of the file.
+
 ## Setup
 
 ```bash
@@ -21,6 +31,16 @@ uv sync
 
 Python dependencies are managed with `uv`. Most commands below should be run
 from the repository root.
+
+## Colab Quickstart
+
+Run the Colab notebook to evaluate `gpt-5-nano` on a dry-run Ko-BrowseComp
+sample with only notebook cells:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/prometheus-eval/K-BrowseComp/blob/main/examples/k_browsecomp_colab.ipynb)
+
+The first cell is the only cell you need to edit. It asks for `OPENAI_API_KEY`
+and one search API key for the selected search engine.
 
 ## Credentials
 
@@ -161,4 +181,3 @@ gitignored Stage 2 aggregate files under `automated_data_gen/seed_expansion/`.
 ```bash
 uv run --extra dev pytest
 ```
-

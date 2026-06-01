@@ -1,3 +1,6 @@
+# Portions adapted from https://github.com/perplexityai/search_evals/blob/main/search_evals/agents/tools/search_web.py
+# Original license: MIT.
+
 from typing import Any, ClassVar
 
 from pydantic import BaseModel, Field

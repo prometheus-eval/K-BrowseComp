@@ -1,3 +1,6 @@
+# Portions adapted from https://github.com/perplexityai/search_evals/blob/main/search_evals/agents/llms/__init__.py
+# Original license: MIT.
+
 # search_evals/agents/llms/__init__.py
 from __future__ import annotations
 

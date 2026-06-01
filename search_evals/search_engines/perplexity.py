@@ -1,3 +1,6 @@
+# Portions adapted from https://github.com/perplexityai/search_evals/blob/main/search_evals/search_engines/perplexity.py
+# Original license: MIT.
+
 from perplexity import AsyncPerplexity
 
 from search_evals.search_engines.types import AsyncSearchEngine, SearchResult

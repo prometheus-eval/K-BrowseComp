@@ -1,3 +1,6 @@
+# Portions adapted from https://github.com/perplexityai/search_evals/blob/main/search_evals/suites/types.py
+# Original license: MIT.
+
 import asyncio
 import logging
 from abc import ABC, abstractmethod

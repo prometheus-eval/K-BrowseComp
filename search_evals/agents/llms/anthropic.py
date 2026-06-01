@@ -1,3 +1,6 @@
+# Portions adapted from https://github.com/perplexityai/search_evals/blob/main/search_evals/agents/llms/anthropic.py
+# Original license: MIT.
+
 from collections.abc import Awaitable, Callable
 from typing import Any, Self, TypeVar
 

@@ -1,3 +1,6 @@
+# Portions adapted from https://github.com/perplexityai/search_evals/blob/main/search_evals/datasets/dataset.py
+# Original license: MIT.
+
 from collections.abc import Iterator
 from pathlib import Path
 from typing import Self, overload

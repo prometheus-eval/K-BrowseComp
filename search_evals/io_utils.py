@@ -1,3 +1,6 @@
+# Portions adapted from https://github.com/perplexityai/search_evals/blob/main/search_evals/io_utils.py
+# Original license: MIT.
+
 import base64
 import hashlib
 import uuid

@@ -1,3 +1,6 @@
+# Portions adapted from https://github.com/perplexityai/search_evals/blob/main/tests/search_engines/test_registry.py
+# Original license: MIT.
+
 import pytest
 
 from search_evals.search_engines.registry import make_search_engine

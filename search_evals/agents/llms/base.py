@@ -1,3 +1,6 @@
+# Portions adapted from https://github.com/perplexityai/search_evals/blob/main/search_evals/agents/llms/base.py
+# Original license: MIT.
+
 from abc import ABC, abstractmethod
 from typing import Any, Self
 

@@ -1,3 +1,6 @@
+# Portions adapted from https://github.com/perplexityai/search_evals/blob/main/search_evals/agents/single_step_search.py
+# Original license: MIT.
+
 from __future__ import annotations
 
 from tenacity import retry, stop_after_attempt, wait_exponential

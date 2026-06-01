@@ -1,3 +1,6 @@
+# Portions adapted from https://github.com/perplexityai/search_evals/blob/main/search_evals/debug_runs.py
+# Original license: MIT.
+
 import re
 from pathlib import Path
 from typing import Any

@@ -1,3 +1,6 @@
+# Portions adapted from https://github.com/perplexityai/search_evals/blob/main/search_evals/search_engines/brave.py
+# Original license: MIT.
+
 import asyncio
 import os
 

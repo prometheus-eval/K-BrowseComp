@@ -1,3 +1,6 @@
+# Portions adapted from https://github.com/perplexityai/search_evals/blob/main/search_evals/search_engines/exa.py
+# Original license: MIT.
+
 import os
 from enum import Enum
 

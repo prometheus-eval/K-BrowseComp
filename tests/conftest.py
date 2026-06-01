@@ -1,3 +1,6 @@
+# Portions adapted from https://github.com/perplexityai/search_evals/blob/main/tests/conftest.py
+# Original license: MIT.
+
 from collections.abc import Generator
 
 import pytest
