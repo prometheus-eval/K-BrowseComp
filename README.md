@@ -12,7 +12,7 @@ It evaluates whether agents can retrieve hard-to-find public information from Ko
 K-BrowseComp contains **400 problems**:
 
 - **K-BrowseComp-Verified**: 300 problems manually written and validated by native Korean speakers.
-- **K-BrowseComp-Synthetic**: 100 machine-generated diagnostic problems created with hard few-shot exemplars and failure-mode-targeted generation. This split is reported separately as a targeted stress test, not pooled with the verified score.
+- **K-BrowseComp-Synthetic**: 100 machine-generated diagnostic problems created with hard few-shot exemplars and failure-mode-targeted generation. (See `automated_data_gen/` for the generation pipeline.)
 
 Each verified item is designed to require either **multi-hop reasoning** or **parallel-branching** constraint satisfaction over public Korean web evidence. 
 The dataset release includes the *problem, gold answer, expected trajectory, source URLs, and checklist values for key intermediate evidence*, enabling trajectory diagnostics in addition to final-answer scoring.
