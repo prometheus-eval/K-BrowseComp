@@ -47,6 +47,18 @@ class TestDatum:
         assert datum.answer == "4"
         assert datum.metadata == {"score": "0.95"}
 
+    def test_create_adds_stable_id_when_missing(self) -> None:
+        data: dict[str, object] = {
+            "problem": "What is 2+2?",
+            "answer": "4",
+        }
+
+        first = Datum.create(data)
+        second = Datum.create(data)
+
+        assert first.id
+        assert first.id == second.id
+
     def test_direct_construction(self) -> None:
         datum = Datum(id="test", problem="Question?", answer="Answer")
 

@@ -1,11 +1,13 @@
-# Ko-BrowseComp Search Evals
+# K-BrowseComp Search Evals
 
-Evaluation and automated problem-generation code for Ko-BrowseComp.
+Evaluation and automated problem-generation code for K-BrowseComp.
 
 This repository is adapted from
 [perplexityai/search_evals](https://github.com/perplexityai/search_evals).
 
-This public repo includes only the Ko-BrowseComp datasets:
+Runtime evals download K-BrowseComp from
+[prometheus-eval/k-browsecomp](https://huggingface.co/datasets/prometheus-eval/k-browsecomp)
+by default. The repo also keeps fallback local JSONL copies:
 
 - `search_evals/datasets/ko_browsecomp.jsonl`
 - `search_evals/datasets/ko_browsecomp_synthetic.jsonl`
@@ -35,7 +37,8 @@ from the repository root.
 ## Colab Quickstart
 
 Run the Colab notebook to evaluate `gpt-5-nano` on a dry-run Ko-BrowseComp
-sample with only notebook cells:
+sample with only notebook cells. The notebook downloads the dataset from
+[prometheus-eval/k-browsecomp](https://huggingface.co/datasets/prometheus-eval/k-browsecomp):
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/prometheus-eval/K-BrowseComp/blob/main/examples/k_browsecomp_colab.ipynb)
 
@@ -76,6 +79,9 @@ below.
 
 ## Run Evaluations
 
+By default, `suite=ko_browsecomp` loads the `verified` config and `test` split
+from [prometheus-eval/k-browsecomp](https://huggingface.co/datasets/prometheus-eval/k-browsecomp).
+
 Run a small live sample:
 
 ```bash
@@ -87,7 +93,7 @@ uv run python search_evals/run_eval.py \
   run_suffix=smoke
 ```
 
-For KO-BrowseComp, `dry_run=true` runs the first 10 samples and still calls the
+For K-BrowseComp, `dry_run=true` runs the first 10 samples and still calls the
 model, search engine, and grader APIs. Use `run_suffix` to make the output
 folder easier to distinguish.
 
@@ -107,10 +113,13 @@ uv run python search_evals/run_eval.py \
   search_engine=perplexity \
   model=gpt-5.4-mini \
   suite=ko_browsecomp \
-  dataset_path=search_evals/datasets/ko_browsecomp_synthetic.jsonl \
+  hf_dataset_config=synthetic \
   dry_run=true \
   run_suffix=synthetic-smoke
 ```
+
+You can still evaluate a local JSONL file by passing `dataset_path=...`; when
+`dataset_path` is set, the Hugging Face dataset settings are ignored.
 
 Outputs are written under:
 

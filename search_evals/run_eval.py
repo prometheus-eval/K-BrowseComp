@@ -56,6 +56,9 @@ async def run_suite(
     max_workers: int,
     grader_model: str,
     dataset_path: str = "",
+    hf_dataset_repo: str = "prometheus-eval/k-browsecomp",
+    hf_dataset_config: str = "verified",
+    hf_dataset_split: str = "test",
 ) -> None:
     """Run evaluation with specified search engine and suite."""
     suite = make_suite(
@@ -67,6 +70,9 @@ async def run_suite(
         max_workers=max_workers,
         grader_model=grader_model,
         dataset_path=Path(dataset_path) if dataset_path else None,
+        hf_dataset_repo=hf_dataset_repo,
+        hf_dataset_config=hf_dataset_config,
+        hf_dataset_split=hf_dataset_split,
     )
     result = await suite()
     logger.info(f"Evaluation complete. Score: {result.score}")
@@ -85,6 +91,9 @@ def main(
     openrouter_reasoning_effort: str = "",
     openrouter_max_tokens: int = 0,
     openrouter_max_context_tokens: int = 0,
+    hf_dataset_repo: str = "prometheus-eval/k-browsecomp",
+    hf_dataset_config: str = "verified",
+    hf_dataset_split: str = "test",
 ) -> None:
     setup_logging()
 
@@ -120,7 +129,21 @@ def main(
     output_dir.mkdir(parents=True, exist_ok=True)
     logger.info(f"Output directory: {output_dir}")
 
-    asyncio.run(run_suite(search_engine, model, suite, output_dir, dry_run, max_workers, grader_model, dataset_path))
+    asyncio.run(
+        run_suite(
+            search_engine,
+            model,
+            suite,
+            output_dir,
+            dry_run,
+            max_workers,
+            grader_model,
+            dataset_path,
+            hf_dataset_repo,
+            hf_dataset_config,
+            hf_dataset_split,
+        )
+    )
 
 
 if __name__ == "__main__":
