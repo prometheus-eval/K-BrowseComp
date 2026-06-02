@@ -5,7 +5,7 @@ K-BrowseComp is a Korean web-browsing agent benchmark inspired by
 [BrowseComp](https://arxiv.org/abs/2504.12516). 
 It evaluates whether agents can retrieve hard-to-find public information from Korean websites, keep track of multi-hop or parallel evidence, and return a single stable short answer grounded in Korean contexts.
 
-📄 Paper: (arXiv link coming soon)
+📄 Paper: [K-BrowseComp](https://arxiv.org/abs/2606.02404)
 
 🤗 Dataset: [K-BrowseComp](https://huggingface.co/datasets/prometheus-eval/k-browsecomp)
 
